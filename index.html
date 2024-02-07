@@ -70,7 +70,7 @@
 
     function drop(event) {
       event.preventDefault()
-      var data = event.dataTransfer.getData("text")
+      let data = event.dataTransfer.getData("text")
       event.target.appendChild(document.getElementById(data))
     }
   </script>
