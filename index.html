@@ -60,19 +60,56 @@
   <button class="reset">Reset Game</button>
 
   <script>
-    function allowDrop(event) {
-      event.preventDefault();
-    };
+    const dragAndDrop = () => {
+			const card = ducument.querySelector('js-cros');
+      const cells = document.querySelector('js-cell');
 
-    function drag(event) {
-      event.dataTransfer.setData("text", event.target.id);
-    };
+      const dragStart = function () {
+        setTimeout (() => {
+          this.classList.add('hide');
+        },0)
+      };
+      const dragEnd = function () {
+        this.classList.remove('hide');
+      };
+      const dragOver = function () {
+        console.log('over');
+      };
+      const dragEnter = function () {
+        console.log('enter');
+      };
+      const dragLeave = function () {
+        console.log('leave');
+        const dragLeave = function () {
+        console.log('leave');
+      };
+      
 
-    function drop(event) {
-      event.preventDefault();
-      let data = event.dataTransfer.getData("text");
-      event.target.appendChild(document.getElementById(data));
+      cells.forEach((cell) => {
+        cell.addEventListener('dragover', dragOver);
+        cell.addEventListener('dragenter', dragEnter);
+        cell.addEventListener('dragleave', dragLeave);
+        cell.addEventListener('drop', dragDrop);
+      };
+      
+
+      card.addEventListener('dragstart', dragStart);
+      card.addEventListener('dragend', dragEnd);
     };
+    dragAndDrop()
+   // function allowDrop(event) {
+   //   event.preventDefault();
+   // };
+
+   // function drag(event) {
+   //   event.dataTransfer.setData("text", event.target.id);
+   // };
+
+   // function drop(event) {
+   //   event.preventDefault();
+   //   let data = event.dataTransfer.getData("text");
+   //   event.target.appendChild(document.getElementById(data));
+   // };
   </script>
 </body>
 
