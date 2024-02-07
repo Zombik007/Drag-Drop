@@ -11,7 +11,7 @@ body
    justify-content: center;
    align-items: center;
    min-height: 100vh;
-   background: linear-gradient(45deg, #FFF6FF, #FEFEDF);
+   background: linear-gradient(45deg, #8AE3A9, #A6D990);
 }
 
 .board
