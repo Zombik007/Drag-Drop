@@ -60,45 +60,7 @@
   <button class="reset">Reset Game</button>
 
   <script>
-    const dragAndDrop = () => {
-			const card = ducument.querySelector('js-cros');
-      const cells = document.querySelector('js-cell');
-
-      const dragStart = function () {
-        setTimeout (() => {
-          this.classList.add('hide');
-        },0)
-      };
-      const dragEnd = function () {
-        this.classList.remove('hide');
-      };
-      const dragOver = function (evt) {
-	      evt.preventDefault();
-        console.log('over');
-      };
-      const dragEnter = function () {
-        console.log('enter');
-      };
-      const dragLeave = function () {
-        console.log('leave');
-        const dragDrop = function () {
-		this.append(card)
-        console.log('drop');
-      };
-      
-
-      cells.forEach((cell) => {
-        cell.addEventListener('dragover', dragOver);
-        cell.addEventListener('dragenter', dragEnter);
-        cell.addEventListener('dragleave', dragLeave);
-        cell.addEventListener('drop', dragDrop);
-      });
-      
-
-      card.addEventListener('dragstart', dragStart);
-      card.addEventListener('dragend', dragEnd);
-    };
-    dragAndDrop()
+    src='main.js'
    // function allowDrop(event) {
    //   event.preventDefault();
    // };
